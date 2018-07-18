@@ -1,2 +1,2 @@
 # datalgo
-Data structures and algorithms in ES6+
+Data structures and algorithms in TypeScript

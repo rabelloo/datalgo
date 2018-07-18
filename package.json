@@ -4,6 +4,12 @@
   "description": "Data structures and algorithms in ES6+",
   "main": "index.ts",
   "private": true,
+  "scripts": {
+    "build": "tsc",
+    "build:ci": "tsc",
+    "lint": "tslint src/**/*.ts --fix",
+    "lint:ci": "tslint src/**/*.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rabelloo/datalgo.git"
@@ -13,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/rabelloo/datalgo/issues"
   },
-  "homepage": "https://github.com/rabelloo/datalgo#readme"
+  "homepage": "https://github.com/rabelloo/datalgo#readme",
+  "devDependencies": {
+    "tslint": "^5.11.0",
+    "typescript": "^2.9.2"
+  }
 }
