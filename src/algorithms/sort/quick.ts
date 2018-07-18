@@ -1,5 +1,10 @@
-import { removeAt, split } from '../functional/array';
+import { removeAt, split } from '../../helpers/immutable/array';
 
+/**
+ * Returns a sorted version of the specified array
+ *
+ * @param array Array to sort
+ */
 export function quickSort<T>(array: T[]): T[] {
     if (array.length < 2) {
         return array;
@@ -15,6 +20,8 @@ export function quickSort<T>(array: T[]): T[] {
     ];
 }
 
+//  private  ------------------
+
 function findPivotIndex<T>(array: T[]): number {
     return Math.floor(array.length / 2);
 }
@@ -22,7 +29,7 @@ function findPivotIndex<T>(array: T[]): number {
 function partition<T>(array: T[], pivotIndex: number): any[] {
     const pivot = array[pivotIndex];
     const exceptPivot = removeAt(array, pivotIndex);
-    const [ smaller, bigger ] = split(exceptPivot, (e) => e < pivot);
+    const [ smaller, bigger ] = split(exceptPivot, e => e < pivot);
 
     return [ pivot, smaller, bigger ];
 }

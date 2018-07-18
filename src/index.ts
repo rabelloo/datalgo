@@ -1,1 +1,1 @@
-export * from './algorithms/quicksort';
+export * from './algorithms/sort';
