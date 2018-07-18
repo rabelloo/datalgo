@@ -1,0 +1,17 @@
+{
+  "name": "datalgo",
+  "version": "1.0.0",
+  "description": "Data structures and algorithms in ES6+",
+  "main": "index.ts",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rabelloo/datalgo.git"
+  },
+  "author": "Andre Luiz Rabello <andre.luiz_r@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rabelloo/datalgo/issues"
+  },
+  "homepage": "https://github.com/rabelloo/datalgo#readme"
+}
