@@ -1,14 +1,16 @@
 {
   "name": "datalgo",
   "version": "1.0.0",
-  "description": "Data structures and algorithms in ES6+",
+  "description": "Data structures and algorithms in TypeScript",
   "main": "index.ts",
   "private": true,
   "scripts": {
     "build": "tsc",
     "build:ci": "tsc",
     "lint": "tslint src/**/*.ts --fix",
-    "lint:ci": "tslint src/**/*.ts"
+    "lint:ci": "tslint src/**/*.ts",
+    "test": "jest --watch",
+    "test:ci": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,9 @@
   },
   "homepage": "https://github.com/rabelloo/datalgo#readme",
   "devDependencies": {
+    "@types/jest": "^23.3.0",
+    "jest": "^23.4.1",
+    "ts-jest": "^23.0.1",
     "tslint": "^5.11.0",
     "typescript": "^2.9.2"
   }
