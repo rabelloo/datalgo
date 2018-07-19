@@ -1,18 +1,18 @@
-import { swap } from '../../helpers/mutable/array';
-
 /**
  * Returns a sorted version of the specified array
  *
  * @param array Array to sort
  */
 export function insertionSort<T>(array: T[]): T[] {
-    return array.reduce((all, current, index) => {
-        const previous = () => all[index - 1];
+    return array.reduce((sorted, current, index) => {
+        const previous = () => sorted[index - 1];
 
-        while (previous() > current) {
-            swap(all, index, --index);
+        while (index > 0 && previous() > current) {
+            sorted[index] = sorted[--index];
         }
 
-        return all;
+        sorted[index] = current;
+
+        return sorted;
     }, array.slice());
 }
