@@ -37,7 +37,7 @@ severely affected.
 
 **E.g. array position swap operations:**
 ``` JavaScript
-[ array[from], [array[to]] ] = [ array[to], [array[from]] ];
+[ array[from], array[to] ] = [ array[to], array[from] ];
 
 // is much faster and clean than
 
