@@ -1,4 +1,4 @@
-import { swap } from '../../mutable/swap';
+import { swap } from '../../mutable/array/swap';
 import { random } from '../../utils';
 
 /**
