@@ -1,30 +1,42 @@
+import { LinkedList } from '../linked-list';
 import { DoublyLinkedListNode } from './node';
 
-export class DoublyLinkedList<T> {
+export class DoublyLinkedList<T> extends LinkedList<T> {
   first: DoublyLinkedListNode<T>;
   last: DoublyLinkedListNode<T>;
-  length = 0;
 
   constructor(collection: Iterable<T> = []) {
+    super();
     for (const value of collection) {
       this.append(value);
     }
   }
 
+  /**
+   * Adds a value to the end of the list
+   */
   append(value: T) {
-    const last = { value } as DoublyLinkedListNode<T>;
-    if (!this.first) {
-      this.first = last;
-    }
-    if (this.last) {
-      last.previous = this.last;
-      this.last.next = last;
-    }
-    this.last = last;
-    this.length++;
+    const previous = this.last;
+    super.append(value);
+    this.last.previous = previous;
   }
 
-  remove(node: DoublyLinkedListNode<T>) {
+  /**
+   * Adds a value to the beginning of the list
+   */
+  prepend(value: T) {
+    const next = this.first;
+    super.prepend(value);
+
+    if (next) {
+      next.previous = this.first;
+    }
+  }
+
+  /**
+   * Removes the specified node from the list
+   */
+  removeNode(node: DoublyLinkedListNode<T>) {
     if (node.previous) {
       node.previous.next = node.next;
     } else {
@@ -36,18 +48,5 @@ export class DoublyLinkedList<T> {
       this.last = node.previous;
     }
     this.length--;
-  }
-
-  prepend(value: T) {
-    const first = { value } as DoublyLinkedListNode<T>;
-    if (this.first) {
-      first.next = this.first;
-      this.first.previous = first;
-    }
-    if (!this.last) {
-      this.last = first;
-    }
-    this.first = first;
-    this.length++;
   }
 }
