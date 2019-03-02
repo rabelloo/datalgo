@@ -9,9 +9,9 @@ describe('algorithms', () => {
         const array = create();
         const shuffled = shuffle(array);
 
-        const actual = quickSort(shuffled);
+        const sorted = quickSort(shuffled);
 
-        expect(actual).toEqual(array);
+        expect(sorted).toEqual(array);
       });
     });
   });
