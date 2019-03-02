@@ -11,6 +11,9 @@ export class LinkedList<T> {
     }
   }
 
+  /**
+   * Adds a value to the end of the list
+   */
   append(value: T) {
     const last = { value } as LinkedListNode<T>;
     if (!this.first) {
@@ -23,6 +26,9 @@ export class LinkedList<T> {
     this.length++;
   }
 
+  /**
+   * Adds a value to the beginning of the list
+   */
   prepend(value: T) {
     const first = { value } as LinkedListNode<T>;
     if (this.first) {
@@ -33,5 +39,30 @@ export class LinkedList<T> {
     }
     this.first = first;
     this.length++;
+  }
+
+  /**
+   * Removes the first instance found of the speficied value
+   */
+  remove(value: T) {
+    let current = this.first;
+    let previous;
+    while (current && current.value !== value) {
+      previous = current;
+      current = current.next;
+    }
+    if (!current) {
+      return;
+    }
+    if (previous) {
+      previous.next = current.next;
+
+      if (this.last === current) {
+        this.last = previous;
+      }
+    } else {
+      this.first = current.next;
+    }
+    this.length--;
   }
 }

@@ -2,8 +2,6 @@ import { LinkedList } from './index';
 
 describe('data-structures', () => {
   describe('LinkedList', () => {
-    const array = [1, 2, 3, 4];
-
     describe('constructor', () => {
       it('should accept empty', () => {
         const list = new LinkedList();
@@ -14,6 +12,8 @@ describe('data-structures', () => {
       });
 
       it('should initialize with an iterable', () => {
+        const array = [1, 2, 3, 4];
+
         const list = new LinkedList(array);
 
         expect(list.first.value).toBe(array[0]);
@@ -25,6 +25,7 @@ describe('data-structures', () => {
     describe('append', () => {
       it('should add a node to the end of the list', () => {
         const value = 5;
+        const array = [1, 2, 3, 4];
         const list = new LinkedList(array);
         const previousLast = list.last;
         const previousLength = list.length;
@@ -40,6 +41,7 @@ describe('data-structures', () => {
     describe('prepend', () => {
       it('should add a node to the beginning of the list', () => {
         const value = 5;
+        const array = [1, 2, 3, 4];
         const list = new LinkedList(array);
         const previousFirst = list.first;
         const previousLength = list.length;
@@ -61,6 +63,49 @@ describe('data-structures', () => {
         expect(list.last.value).toBe(value);
         expect(list.first).toBe(list.last);
         expect(list.length).toBe(1);
+      });
+    });
+
+    describe('remove', () => {
+      it('should remove the first found instance of the specified value', () => {
+        const value = 2;
+        const array = [1, 2, 2, 3];
+        const list = new LinkedList(array);
+
+        list.remove(value);
+
+        expect(list.length).toBe(array.length - 1);
+        expect(list.first.next.value).toBe(value);
+      });
+
+      it('should do nothing if contained within the list', () => {
+        const value = 5;
+        const array = [1, 2, 3];
+        const list = new LinkedList(array);
+
+        list.remove(value);
+
+        expect(list.length).toBe(array.length);
+      });
+
+      it('should reassign first if removing the first', () => {
+        const value = 1;
+        const array = [1, 2, 3];
+        const list = new LinkedList(array);
+
+        list.remove(value);
+
+        expect(list.first.value).toBe(array[1]);
+      });
+
+      it('should reassign last if removing the last', () => {
+        const value = 3;
+        const array = [1, 2, 3];
+        const list = new LinkedList(array);
+
+        list.remove(value);
+
+        expect(list.last.value).toBe(array[1]);
       });
     });
   });
