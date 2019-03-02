@@ -4,5 +4,5 @@
  * @param length Array length, defaults to 10
  */
 export function createEmpty(length = 10): any[] {
-    return Array(length);
+  return Array(length);
 }

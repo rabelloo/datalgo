@@ -6,5 +6,5 @@
  * @param to Index to swap to
  */
 export function swap<T>(array: T[], from: number, to: number): void {
-    [array[from], array[to]] = [array[to], array[from]];
+  [array[from], array[to]] = [array[to], array[from]];
 }

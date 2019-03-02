@@ -6,8 +6,5 @@
  * @param length Amount of elements to remove, defaults to 1
  */
 export function removeAt<T>(array: T[], index: number, length = 1): T[] {
-    return [
-        ...array.slice(0, index),
-        ...array.slice(index + length),
-    ];
+  return [...array.slice(0, index), ...array.slice(index + length)];
 }

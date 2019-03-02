@@ -1,5 +1,1 @@
-import { swap } from './swap';
-
-export {
-    swap,
-};
+export { swap } from './swap';

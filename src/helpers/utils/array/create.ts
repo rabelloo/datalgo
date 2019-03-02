@@ -7,7 +7,7 @@ import { createEmpty } from './createEmpty';
  * @param increment Increment per iteration, defaults to 1
  */
 export function create(length = 10, increment = 1): number[] {
-    return createEmpty(length)
-        .fill(null)
-        .map((_, i) => i * increment);
+  return createEmpty(length)
+    .fill(null)
+    .map((_, i) => i * increment);
 }

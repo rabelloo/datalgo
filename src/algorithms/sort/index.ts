@@ -1,7 +1,2 @@
-import { insertionSort } from './insertion';
-import { quickSort } from './quick';
-
-export {
-    insertionSort,
-    quickSort,
-};
+export { insertionSort } from './insertion';
+export { quickSort } from './quick';

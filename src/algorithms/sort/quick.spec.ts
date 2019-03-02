@@ -3,16 +3,16 @@ import { create } from '../../helpers/utils/array';
 import { quickSort } from './quick';
 
 describe('algorithms', () => {
-    describe('sort', () => {
-        describe('quick', () => {
-            it('should sort a shuffled array', () => {
-                const array = create();
-                const shuffled = shuffle(array);
+  describe('sort', () => {
+    describe('quick', () => {
+      it('should sort a shuffled array', () => {
+        const array = create();
+        const shuffled = shuffle(array);
 
-                const actual = quickSort(shuffled);
+        const actual = quickSort(shuffled);
 
-                expect(actual).toEqual(array);
-            });
-        });
+        expect(actual).toEqual(array);
+      });
     });
+  });
 });

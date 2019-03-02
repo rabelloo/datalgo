@@ -8,25 +8,20 @@ module.exports = {
       branches: 100,
       functions: 100,
       lines: 100,
-      statements: 100
-    }
+      statements: 100,
+    },
   },
   globals: {
     'ts-jest': {
-      tsConfigFile: 'src/tsconfig.test.json'
-    }
+      tsConfigFile: 'src/tsconfig.test.json',
+    },
   },
-  moduleFileExtensions: [
-    "ts",
-    "js"
-  ],
+  moduleFileExtensions: ['ts', 'js'],
   rootDir: 'src', // acts as if file was inside /src folder
-  testEnvironment: "node",
-  testMatch: [
-    '**/*.spec.ts'
-  ],
+  testEnvironment: 'node',
+  testMatch: ['**/*.spec.ts'],
   transform: {
-    '^.+\\.ts$': 'ts-jest'
+    '^.+\\.ts$': 'ts-jest',
   },
   verbose: true,
 };

@@ -1,9 +1,3 @@
-import { removeAt } from './removeAt';
-import { shuffle } from './shuffle';
-import { split } from './split';
-
-export {
-    removeAt,
-    shuffle,
-    split,
-};
+export { removeAt } from './removeAt';
+export { shuffle } from './shuffle';
+export { split } from './split';

@@ -3,16 +3,16 @@ import { create } from '../../helpers/utils/array';
 import { insertionSort } from './insertion';
 
 describe('algorithms', () => {
-    describe('sort', () => {
-        describe('insertion', () => {
-            it('should sort a shuffled array', () => {
-                const array = create();
-                const shuffled = shuffle(array);
+  describe('sort', () => {
+    describe('insertion', () => {
+      it('should sort a shuffled array', () => {
+        const array = create();
+        const shuffled = shuffle(array);
 
-                const actual = insertionSort(shuffled);
+        const actual = insertionSort(shuffled);
 
-                expect(actual).toEqual(array);
-            });
-        });
+        expect(actual).toEqual(array);
+      });
     });
+  });
 });

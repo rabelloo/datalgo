@@ -1,7 +1,2 @@
-import { create } from './create';
-import { createEmpty } from './createEmpty';
-
-export {
-    create,
-    createEmpty,
-};
+export { create } from './create';
+export { createEmpty } from './createEmpty';
