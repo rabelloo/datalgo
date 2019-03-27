@@ -39,7 +39,7 @@ severely affected.
 ``` JavaScript
 [ array[from], array[to] ] = [ array[to], array[from] ];
 
-// is much faster and clean than
+// is much faster and cleaner than
 
 const [ smaller, bigger ] = from < to ? [from, to] : [to, from];
 
