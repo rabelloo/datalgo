@@ -13,15 +13,13 @@ module.exports = {
   },
   globals: {
     'ts-jest': {
-      tsConfigFile: 'src/tsconfig.test.json',
+      tsConfig: 'src/tsconfig.test.json',
     },
   },
-  moduleFileExtensions: ['ts', 'js'],
+  moduleFileExtensions: ['js', 'ts'],
+  preset: 'ts-jest',
   rootDir: 'src', // acts as if file was inside /src folder
   testEnvironment: 'node',
   testMatch: ['**/*.spec.ts'],
-  transform: {
-    '^.+\\.ts$': 'ts-jest',
-  },
   verbose: true,
 };

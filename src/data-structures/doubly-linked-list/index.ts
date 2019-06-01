@@ -28,6 +28,7 @@ export class DoublyLinkedList<T> extends LinkedList<T> {
     const next = this.first;
     super.prepend(value);
 
+    /* istanbul ignore else */
     if (next) {
       next.previous = this.first;
     }
